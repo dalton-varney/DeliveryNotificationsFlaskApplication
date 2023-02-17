@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block body %}
+<body class="tos-bg">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="http://alwaysai.co/" target="_blank"><div class="alwaysai-logos-svg-horizontal-logo-red-black"></div>
+    </a>
+    <a class="nav-static" target="_blank">Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <span class="navbar-nav mr-auto"></span>
+
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a class="nav-link" href="https://alwaysai.co/docs/" target="_blank">Documentation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://alwaysai.co/support" target="_blank">Support</a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+  <div class="container" id="main-viewer" min-width= "1024px" width="100%">
+    <nav class="navbar-left">
+
+          <li class="nav-item-left">
+            <a href="localhost:5000/" ><img src="static/Dashboard.svg"></a>
+          </li>
+          <li class="nav-item-left">
+            <a href="https://console.alwaysai.co/dashboard" ><img src="static/projects.svg"></a>
+          </li>
+          <li class="nav-item-left">
+            <a href="https://console.alwaysai.co/dashboard" ><img src="static/Datasets.svg"></a>
+          </li>
+          <li class="nav-item-left">
+            <a href="https://console.alwaysai.co/dashboard" ><img src="static/models.svg"></a>
+          </li>
+          <li class="nav-item-left">
+            <a href="https://console.alwaysai.co/dashboard" ><img src="static/Devices.svg"></a>
+          </li>
+    </nav>
+    <br>
+    <div class="container">
+      <div class="card-deck">
+        <div class="main-text">
+
+          <h2> Welcome to alwaysAI</h2>
+        </div>
+        <br>
+        <div class="main-text">
+          <h5> alwaysAI Materials Delivery Notifications</h5>
+        </div>
+        <br>
+        <div id="notif" class="alert"><span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span></div>
+          <audio id="notificationSound" src="relax-message-tone.mp3"></audio>
+          <img id="streamer-image" class="streamer-image">
+          <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"> Initial Insights </h5>
+
+            <div class="card-scroller">
+              <br>
+              <h6> Vehicles On-Site:</h6>
+              <h2 id= "child-text"></h2>
+              <h6> Incoming Trucks:</h6>
+              <h2 id= "adult-text"></h2>
+              <button class="btn video-btn" id="start-button"><i class="fa fa-video-camera"></i> Start Data Collection</button>
+              <button class="btn stop-btn" id="stop-button"><i class="fa fa-stop"></i> Stop Data Collection</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+    <div class="container" min-width= "200px" width="100%"></div>
+      <div class="dash-sub-title">
+        <br>
+        <div class="container">
+          <div class="card-controls">
+            <div class="card-wrap">
+            <div class="card-body">
+              <h5 id= "streamer-text" class="card-title"> <div class="stop-button" id="stop-app"></div></h5>
+              <img id="video1" class="videos">
+              <img id="video2" class="videos">
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+{% endblock %}

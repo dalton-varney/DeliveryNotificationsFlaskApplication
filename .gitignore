@@ -1,0 +1,8 @@
+alwaysai.target.json
+alwaysai.project.json
+venv
+models
+.DS_Store
+models/.DS_Store
+static/.DS_Store
+templates/.DS_Store
